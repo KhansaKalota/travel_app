@@ -1,65 +1,191 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import Camp from "@/components/Camp";
+import Guide from "@/components/Guide";
+import Features from "@/components/Features";
+import GetApp from "@/components/GetApp";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-white text-gray-800">
+
+      {/* HOME */}
+      <section id="home">
+        <Hero />
+      </section>
+
+      {/* CAMP */}
+      <section id="camp">
+        <Camp />
+      </section>
+
+      {/* GUIDE */}
+      <section id="guide">
+        <Guide />
+      </section>
+
+      {/* FEATURES */}
+      <section id="features">
+        <Features />
+      </section>
+
+      {/* GET APP */}
+      <section id="getapp">
+        <GetApp />
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="padding-container py-24 bg-white">
+        <div className="max-container">
+
+          <h2 className="bold-52 text-green-700 text-center">
+            Our Services
+          </h2>
+
+          <p className="regular-16 text-gray-600 text-center mt-3 max-w-[600px] mx-auto">
+            Premium travel experiences with safety, guidance, and adventure planning.
           </p>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+
+            <div className="p-8 rounded-3xl border shadow-md hover:shadow-xl transition">
+              <h3 className="bold-20 text-green-700">Camping Tours</h3>
+              <p className="text-gray-600 mt-2">
+                Explore nature safely with expert guided tours.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl border shadow-md hover:shadow-xl transition">
+              <h3 className="bold-20 text-green-700">Offline Maps</h3>
+              <p className="text-gray-600 mt-2">
+                Navigate anywhere without internet connection.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl border shadow-md hover:shadow-xl transition">
+              <h3 className="bold-20 text-green-700">Trip Planning</h3>
+              <p className="text-gray-600 mt-2">
+                Custom adventure plans for solo and group trips.
+              </p>
+            </div>
+
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </section>
+
+      {/* PRICING */}
+      <section id="pricing" className="padding-container py-24 bg-gray-50">
+        <div className="max-container text-center">
+
+          <h2 className="bold-52 text-green-700">
+            Pricing Plans
+          </h2>
+
+          {/* 🔥 FIXED TEXT (BRIGHT + BOLD) */}
+          <p className="regular-16 font-semibold text-green-900 tracking-wide mt-3">
+            Choose the perfect plan for your adventure
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-10 mt-12">
+
+            {/* BASIC */}
+            <div className="bg-white p-10 rounded-3xl shadow-md hover:shadow-xl transition">
+              <h3 className="bold-20 text-green-700">Basic</h3>
+              <p className="text-4xl font-bold mt-4">$9</p>
+              <p className="text-gray-500">per month</p>
+
+              <ul className="mt-6 text-gray-600 space-y-2">
+                <li>✔ Offline Maps</li>
+                <li>✔ Basic Support</li>
+              </ul>
+
+              <button className="mt-6 w-full bg-green-700 text-white py-3 rounded-full hover:bg-green-800">
+                Choose Plan
+              </button>
+            </div>
+
+            {/* PRO */}
+            <div className="bg-green-700 text-white p-10 rounded-3xl shadow-xl scale-105">
+              <h3 className="bold-20">Pro</h3>
+              <p className="text-4xl font-bold mt-4">$19</p>
+              <p className="text-white/80">per month</p>
+
+              <ul className="mt-6 space-y-2">
+                <li>✔ Guided Tours</li>
+                <li>✔ Unlimited Trips</li>
+              </ul>
+
+              <button className="mt-6 w-full bg-white text-green-700 py-3 rounded-full font-bold">
+                Most Popular
+              </button>
+            </div>
+
+            {/* ELITE */}
+            <div className="bg-white p-10 rounded-3xl shadow-md hover:shadow-xl transition">
+              <h3 className="bold-20 text-green-700">Elite</h3>
+              <p className="text-4xl font-bold mt-4">$29</p>
+              <p className="text-gray-500">per month</p>
+
+              <ul className="mt-6 text-gray-600 space-y-2">
+                <li>✔ VIP Support</li>
+                <li>✔ Luxury Trips</li>
+              </ul>
+
+              <button className="mt-6 w-full bg-green-700 text-white py-3 rounded-full hover:bg-green-800">
+                Choose Plan
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="padding-container py-16 bg-green-900 text-white">
+
+        <div className="max-container flex flex-col items-center">
+
+          <h2 className="bold-40">
+            Contact Us
+          </h2>
+
+          <p className="regular-16 text-white/80 mt-2 text-center max-w-[400px]">
+            Send us a message and we will respond quickly.
+          </p>
+
+          <form className="mt-6 w-full max-w-[420px] flex flex-col gap-3">
+
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="p-3 rounded-lg text-black"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="p-3 rounded-lg text-black"
+            />
+
+            <textarea
+              placeholder="Message"
+              className="p-3 rounded-lg h-[100px] text-black"
+            />
+
+            <button
+              type="submit"
+              className="bg-white text-green-900 font-bold py-3 rounded-full hover:bg-gray-200"
+            >
+              Send Message
+            </button>
+
+          </form>
+
         </div>
-      </main>
-    </div>
+
+      </section>
+
+    </main>
   );
 }
